@@ -10,6 +10,7 @@ summary_info$min_censored_year <- kidz_data %>% group_by(year) %>%
   summarise(count = sum(count)) %>%
   filter(count == min(count)) %>%
   pull(year)
+
 # This will find the year with the most amount of censored words
 summary_info$max_censored_year <- kidz_data %>% group_by(year) %>% 
   summarise(count = sum(count)) %>%
