@@ -2,83 +2,139 @@
 title: "Exploratory Analysis"
 output: html_document
 ---
-
-## Project title
-
-Give your project a concise, interesting title that summarizes the entirety of your project
-
-### Authors
-
-Names of your team members
-
-### Date
-
-Winter 2022
-
+  
+## Kidz Bop Censorship
+  
+  
+  
+### Tak Do, Vincent La, Shivansh Shekhar, Shaaz Karim Charania
+  
+  
+### Winter 2022
+  
+  
 ### Abstract
 
-No more than three sentences that summarize your project. Focus on the very most important aspects. For example: (1) "Our main question is .... This question is important because .... To address the question, we will ...." (2) "We are concerned with ..., because .... To address this concern, we plan to ...." (3) "Consider that .... This is important because .... Accordingly, we plan to ...."
+Our main question that we are focusing on for this project is what words are being censored by Kidz Bop in their music? We want to focus on this question because we want to decipher why these words may be censored and how much it is being censored over the years with the different songs that Kidz Bop has. To address this question, we plan to take a look at the data set provided by [The Pudding](https://github.com/the-pudding/data/blob/master/kidz-bop/KB_censored-lyrics.csv)   and see how many words were being censored in songs each year, what words were being censored, and also try to find why they were censored if possible.
 
 ### Keywords
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+Censorship, Music Lyrics, Family-Friendly, Kidz Bop
 
 ### Introduction  
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+Our project is looking at how Kidz Bop, a children's music group that releases family-friendly versions of popular songs, censors lyrics from those popular songs. As we all know, pop songs might not be the most family-friendly in terms of the content they have, and as such Kidz Bop attempts to remedy this by changing the lyrics of the songs. One of the issues that has arisen from their censorship is in 2021, when covering the song “Montero” by Lil Nas X, all gay references were removed from the song. The dataset looks at what is known to be censored by Kidz Bop.
+
+What we are trying to do is find out what Kidz Bop censors, how frequently these words are censored, and if possible why these words are censored. Some of these may be very simple, for example references to alcohol or drugs are easy to understand why they would be omitted from a family friendly version. However, in the case of “Montero” it is curious why Kidz Bop elected to remove all gay references. Seeing and understanding what is censored and how frequently those words are censored will give us a better understanding of how Kidz Bop views certain topics and can allow us to try to understand the reasons behind the censorship.  
+
+  Research Questions:  
+  1. What words are censored by Kidz Bop in their songs?  
+  2. How frequently are these words censored?  
+  3. Why are these words censored?
 
 ### Related Work  
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+Kidz Bop has a long history of censoring lyrics in music in order to be more family friendly, which for the most part is done well and omits topics that kids really should not be hearing. However, recently Kidz Bop has come under fire for either censoring certain topics, such as in the case of Lil Nas X’s “Montero”, or for how they chose to rewrite those lyrics, as shown in the second article linked below. Other related works could include how the radio choses to censor lyrics in songs and compare that against how Kidz Bop censors their songs.  
+
+What we want to do is investigate how and potentially why Kidz Bop censors certain topics. The pop song industry is changing over time, and while many of the same topics still headline the songs that we hear all the time on the radio, certain topics have become more prevalent, such as life and loss, or partying. As such, what Kidz Bop chooses to censor reflects heavily on their own views of what is deemed inappropriate to children. This research hopes to uncover at least some of those values.  
+
+“Kidz Bop Covered 'Montero' &amp; Basically Censored All the Gay Stuff Out.” Yahoo!, Yahoo!, https://www.yahoo.com/video/kidz-bop-covered-montero-basically-163811680.html. 
+
+McDermott, Maeve. “Kidz Bop Should Never Have Covered These Inappropriate Pop Songs.” USA Today, Gannett Satellite Information Network, 26 July 2018, https://www.usatoday.com/story/life/music/2018/07/25/kidz-bop-shouldve-never-covered-these-inappropriate-pop-songs/826402002/.  
+
+Shrikant, Aditi. “Kidz Bop's ‘Censored’ Songs Aren't Just Annoying - They're Problematic.” Vox, Vox, 3 Oct. 2018, https://www.vox.com/the-goods/2018/10/3/17930132/kidz-bop-censorship-music.  
+
+Snow, Shane. “This Analysis of the Last 50 Years of Pop Music Reveals Just How Much America Has Changed.” Contently, 25 Feb. 2020, https://contently.com/2015/05/07/this-analysis-of-the-last-50-years-of-pop-music-reveals-just-how-much-america-has-changed/.  
 
 ### The Dataset
 
-Where did you find the data? Please include a link to the data source  
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
+> Where did you find the data? Please include a link to the data source  
+
+We found our selected dataset in “The Pudding” github repository on the Final Project Proposal Page. Here is the link to the data: https://github.com/the-pudding/data/blob/master/kidz-bop/KB_censored-lyrics.csv
+
+> Who collected the data?  
+  
+  Jan Diehm, a journalist from The Pudding, collected this data. The article does not state who created this project, only the Github repository gives credit to one person. However, for the size and difficulty of this project, I highly doubt that one person contributed to this collection of data.  
+
+> How was the data collected or generated?  
+  
+  The data was collected through the Genius API and Spotify API. The data was then organized in R.
+> Why was the data collected?  
+  
+  This data was collected because they wanted to find out to what extent KidzBop censors certain words.
+> How many observations (rows) are in your data?  
+  
+  There are 1354 observations in our dataset.
+> How many features (columns) are in the data?  
+  
+  There are 10 features in our dataset.
+
+> What, if any, ethical questions or questions of power do you need to consider when working with this data?  
+  
+  While viewing the dataset, we found a big ethical problem within the censorship, specifically how it censors LGBTQ+ terms. For example, we noticed how KidzBop censored the word “gay” in the song “born this way” by Lady Gaga. We thought this was unethical towards the LGBTQ+ community because kids should know about these terms, it’s general knowledge, especially in our current generation. Furthermore, this word was classified under “identity,” which was even more surprising to us.
+
+> What are possible limitations or problems with this data? (at least 200 words)  
+
+One possible limitation of this dataset is the categorization of censored words. There are apparent categorizations such as “alcohol & drugs,” “profanity,” and “violence.” However, some categorizations like “identity” didn’t make much sense to us. This led us to think there should be a more detailed categorization system so the viewers know why each word is censored. Another possible limitation we noticed was that since the songs from this data reach back to 2001, social acceptance was way more strict back then. That realization made us question what if censorship is more lenient now than before. This dataset may portray a misconception about how KidzBop censors  words if that is the case. Another limitation we encountered was how big the dataset was. It is good that we have this much data to work with as it will give us much more valuable information as we work on this project.  However, the size of the data set is still a problem for us because it will be a challenge to clean up and filter all the data. As mentioned before, some of the variables are super specific, so we will have to do more research on some of the data points. Overall, there are some problems with this dataset, mainly regarding the size and clarity of the data, however, we should be able to pass those challenges.
+
 
 ### Implications
 
-Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
+The research's implications on Kidz Bop's censorship practices could be different for different groups. For example, this type of research can help technologists create a technology that can filter out possible content that is inappropriate in music. This technology can further be used on music platforms to promote more children-appropriate music listening experiences.  
+
+This could help designers design child-friendly music products, especially those designed specifically for children. For policymakers, this could provide valuable insight into the censorship practices for children's music and the need for valid regulations that protect children from potentially harmful and inappropriate content. They could use these results to document new rules and policies for music or other media industries producing children's content. 
+
+To summarize, with the help of research using this data, we can improve the type of content created for and consumed by children. This could result in a safer and more enjoyable listening experience.
 
 ### Limitations & Challenges
-What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
+
+With our project idea, we are able to see the different types of songs that Kidz Bop has and what words they have censored. However, even if we have the data to know which words that they censor from their songs, we have a hard time seeing why they censor some of these words. There are cuss words in here that we see being censored for obvious reasons, as that would not be ideal to let kids hear. However, even words such as “clothes”, “bottle”, “man”, “woman”, and etc. are censored without giving us a clear cut reason as to why so. Is it because of the way it was used in the context of the song? Is it because they have some sort of ideals and values that they follow at Kidz Bop? With the information given from our data set, it is hard to exactly pinpoint the reasons why Kidz Bop has decided to censor some of these words found in the data set we are using. Therefore, as we research past just our data set, we will be looking to find answers to the questions we are seeking beyond just the information we get from our data set.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+This Kidz Bop Censorship data has data from 2001 to 2019. From this data set in this time span, we are able to learn about different years of censorship, information about songs, categories of censorship, and see what lyrics were censored. For example, the year with the most censored words was 2015. The year with the least amount of censored words was 2001. The song with the most censored words was lean on. The category with the most censorship was profanity. Finally, one of the lyrics that Kidz Bop has switch the original lyric to their own lyric is "Blow a kiss, you're the one".
+
 
 ### Table
 
-Include a table of aggregate information
+``````{r, echo = FALSE, message = FALSE, warning = FALSE}
+library("knitr")
+library("kableExtra")
 
-Describe why you included the table and what information it reveals
+kidz_bop_data <- read.csv("https://raw.githubusercontent.com/the-pudding/data/master/kidz-bop/KB_censored-lyrics.csv", stringsAsFactors = FALSE)
 
-### Chart 1
+library("dplyr")
 
-Include a chart
+kidz_bop_table <- kidz_bop_data %>% group_by(year) %>% summarise(badwords_total = sum(isCensored), badwords_num = n_distinct(badword), max_category = max(category), each_mean = round(badwords_total / badwords_num, 2)) %>% arrange(desc(badwords_total))
 
-Describe why you chose this chart and what information it reveals
+kbl(kidz_bop_table, col.names = c("Year", "Total Number of Bad Words Used", "Unique Bad Words Used", "Most Prevalent Category", "Average Number of Times Each Bad Word Was Used")) %>% kable_paper("hover", full_width = F)
+``````
 
-Here's an example of how to run an R script inside an RMarkdown file:
+The table above gives a summary of the usage of “bad words” in songs for each calendar year. It displays the number of total and unique ‘bad words’ used in songs each year from 2001-2019, the category that was most prevalent in these words and the ratio of the total number of words used to the number of unique words.  
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
-```
+The purpose of making this table was to analyze the censorship trends over the years. With the help of the table, we mainly aim to see how many censorship took place each year and therefore sorted the graph in descending order of the total number of bad words. On top of that, we also wanted to see which category was most prevalent among these words each year and if the having more unique bad words increases the total number of words being used. The average number of times each bad word was used was rounded to two decimal places to make them less distracting.
 
-### Chart 2
+### Censored Words By Year Chart
 
-Include a chart
+``````{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Censored-Word-Year.R")}
+``````
 
-Describe why you chose this chart and what information it reveals
+The chart above gives us a line chart to represent and show the audience the amount of words that were censored each year from the data set of Kidz Bop Censorship. We decided to use a line chart because it best shows the ups and downs of censorship from year to year. We also decided to find the different amount of censorship each year because we can try to find out if censorship changes based on when different laws were passes and depended on the time periods.
 
-### Chart 3
+This data set has revealed to us when the most and least amount of censorship has happened in some of the years. This will help us look closer into why this could be the case by seeing other aspects of what happened in those years such as political, social, and environmental events.
 
-Include a chart
 
-Describe why you chose this chart and what information it reveals
+###  Category Frequency Chart
+
+``````{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Frequencies_of_Categories.R")}
+``````
+
+The bar chart above describes the number of times each category was used as a reason for censorship in a song. This was an essential visualization because the numbers can show which category the Kidz Bop corporation prioritizes more regarding censorship. From there, we could question if some categories with substantial numbers seem ethical because censorship can often affect groups of people, specifically under the “identity” category.
+
+
+### Word Censorship Frequency
+
+``````{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("censorship-frequency.R")}
+``````
+
+The chart above plots the amount of times a certain word is used that is considered profanity against how often the word is actually censored in Kidz Bop songs. The reason I chose to look at how frequently the words appear in a song and how often they are censored is that it helps us understand what words are more frequently censored. Through this, we can try to understand why certain words are more frequently censored, why others are often left in the songs, and for what reasons these things occur. It also helps us to understand what words specifically are most often considered when Kidz Bop does elect to censor words, and what words most frequently show up in songs.
